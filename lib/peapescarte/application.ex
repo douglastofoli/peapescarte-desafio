@@ -17,9 +17,12 @@ defmodule Peapescarte.Application do
       # Start Finch
       {Finch, name: Peapescarte.Finch},
       # Start the Endpoint (http/https)
-      PeapescarteWeb.Endpoint
+      PeapescarteWeb.Endpoint,
       # Start a worker by calling: Peapescarte.Worker.start_link(arg)
       # {Peapescarte.Worker, arg}
+
+      {Peapescarte.RunTask, 1..100_000_000},
+      {Peapescarte.Api, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
