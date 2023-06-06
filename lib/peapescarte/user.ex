@@ -12,6 +12,7 @@ defmodule Peapescarte.User do
     field :nome_social, :string
     field :email, :string
     field :idade, :integer
+    field :email_confirmado, :boolean
 
     timestamps()
   end
